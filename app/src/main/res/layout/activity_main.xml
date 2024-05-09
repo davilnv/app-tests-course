@@ -1,76 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonPrevious"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="16dp"
-        android:text="Anterior"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <ImageView
+            android:id="@+id/imageViewNews"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dog_banner" />
 
-    <ImageView
-        android:id="@+id/imageViewNews"
-        android:layout_width="0dp"
-        android:layout_height="230dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dog_banner" />
+        <TextView
+            android:id="@+id/textViewNewsTittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Ruffles um cachorrinho"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewNews" />
 
-    <TextView
-        android:id="@+id/textViewNewsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="Imagem de um cachorrinho"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewNews" />
+        <TextView
+            android:id="@+id/textViewNewsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="08/05/2024"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewNewsTittle"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Num campo vasto e verdejante, onde o sol se despejava em tons dourados, brincava um pequeno cachorrinho. Seu pelo macio e castanho parecia reluzir à luz do dia, e seus olhos, dois pequenos poços de curiosidade e alegria, observavam o mundo com uma intensidade cativante. Ele era um explorador incansável daquele mundo ao seu redor, onde cada pedra, cada flor e cada brisa traziam consigo segredos esperando para serem descobertos.  Seu nome era Ruffles, uma escolha inspirada pela sua pelagem que parecia repleta de dobras e camadas, como as ondas suaves de um rio tranquilo. Ruffles não era apenas um cachorrinho comum; ele era um aventureiro destemido, sempre pronto para novas descobertas e travessuras. Seu espírito livre o levava a correr pelos campos, saltar sobre pequenos riachos e farejar cada canto e recanto em busca de novas aventuras.  "
-        android:textAlignment="viewStart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNewsTitle" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Num campo vasto e verdejante, onde o sol se despejava em tons dourados, brincava um pequeno cachorrinho. Seu pelo macio e castanho parecia reluzir à luz do dia, e seus olhos, dois pequenos poços de curiosidade e alegria, observavam o mundo com uma intensidade cativante. Ele era um explorador incansável daquele mundo ao seu redor, onde cada pedra, cada flor e cada brisa traziam consigo segredos esperando para serem descobertos.  Seu nome era Ruffles, uma escolha inspirada pela sua pelagem que parecia repleta de dobras e camadas, como as ondas suaves de um rio tranquilo. Ruffles não era apenas um cachorrinho comum; ele era um aventureiro destemido, sempre pronto para novas descobertas e travessuras. Seu espírito livre o levava a correr pelos campos, saltar sobre pequenos riachos e farejar cada canto e recanto em busca de novas aventuras.  "
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNewsTittle" />
 
-    <TextView
-        android:id="@+id/textViewNewsAuthor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Chat Gepeto"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/buttonNewsNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Próximo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/buttonNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Próximo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/buttonNewsPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Anterior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/buttonNewsNext"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textViewNewsAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Chat Gepeto"
+            app:layout_constraintBaseline_toBaselineOf="@+id/buttonNewsPrevious"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
