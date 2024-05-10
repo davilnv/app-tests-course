@@ -5,4 +5,5 @@
     <color name="primary_color">#6BAAED</color>
     <color name="secondary_color">#FE1F3D</color>
     <color name="accent_color">#1F7CFE</color>
+    <color name="branco_translucido">#B2FFFFFF</color>
 </resources>
